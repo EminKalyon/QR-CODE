@@ -3,154 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
-  <title>Frontend Mentor | NFT preview card component</title>
+  <title>Frontend Mentor | QR code component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     body{
       display: grid;
       place-content: center;
+      background-color: rgb(213,225,239);
       margin: 0;
       min-height: 100vh;
-      background-color: rgb(13,26,45);
+      font-family: verdana;
     }
-    .container{
-      width: 262px;
-      background-color: rgb(21,39,63);
-      padding: 18px;
-      border-radius: 12px;
-      box-shadow: 0px 0px 60px black;
+    .inclusive{
+      width: 252px;
+      background-color: rgb(255, 255, 255);
+      border-radius: 15px;
+      padding: 12px;
     }
-    .nft{
-      width: 262px;
-      border-radius: 6px;
-      grid-column: 1;
-    grid-row: 1;
+    img{
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
     }
-    .nft.a2:hover{
-      background: url(images/icon-view.svg);
-    }
-    img.avatar{
-      width: 24px;
-      border: solid 1px;
-      border-radius: 32px;
-      border-color: white;
-      margin-right: 8px;
-    }
-    h3{
-      font-size: 20px;
-      color: white;
-      font-family: system-ui;
-    }
-    h3:hover{
-      color: rgb(25,212,214);
-      cursor: pointer;
+    .text{
+      font-size: 17px;
+      text-align: center;
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
     }
     p{
-      font-size: 14px;
-      color: rgb(86,108,133);
-      font-family: system-ui;
+      font-size: 12px;
+      color: grey;
     }
-    .miktar{
-      color: rgb(25,212,214);
-      font-family: system-ui;
-      font-size: 14px;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-    .day{
-      margin-left: 78px;
-      color: rgb(86,108,133);
-      font-family: system-ui;
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-    .nick{
-      color: rgb(86,108,133);
-      font-family: system-ui;
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      margin-bottom: 8px;
-    }
-    .a1{
-      color: white;
-      text-decoration: none;
-    }
-    .a1:hover{
-      color: rgb(25,212,214);
-    }
-    hr{
-      opacity: 25%;
-    }
-    a.a2::before {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 100%;
-        background: rgb(25 212 214);
-        opacity: 0;
-        z-index: 1;
-        position: absolute;
-        transition: .3s all;
-        border-radius: 6px;
-    }
-    svg {
-        grid-column: 1;
-        grid-row: 1;
-        position: relative;
-        z-index: 2;
-        opacity: 0;
-        transition: .3s all;
-    }
-    .a2:hover svg {
-        opacity: 1;
-    }
-
-    a.a2:hover::before {
-        opacity: .5;
-    }
-
-    a.a2 {
-        display: grid;
-        justify-items: center;
-        align-items: center;
-        position: relative;
-    }
-    .ethday{
-      display: flex;
-      align-items: center;
-      gap: 2px;
-      margin-top: 18px;
-      margin-bottom: 18px;
+    h3{
+      font-size: 16px;
+      color: rgb(55,68,83);
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <a href="#" class="a2">
-      <svg width="48" height="48" xmlns="http://www.w3.org/2000/svg">
-        <g fill="none" fill-rule="evenodd">
-          <path d="M0 0h48v48H0z"/>
-          <path d="M24 9C14 9 5.46 15.22 2 24c3.46 8.78 12 15 22 15 10.01 0 18.54-6.22 22-15-3.46-8.78-11.99-15-22-15Zm0 25c-5.52 0-10-4.48-10-10s4.48-10 10-10 10 4.48 10 10-4.48 10-10 10Zm0-16c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6Z" fill="#FFF" fill-rule="nonzero"/>
-        </g>
-      </svg>
-      <img src="images/image-equilibrium.jpg" alt="NFT CARD" class="nft">
-    </a>
+  <div class="inclusive">
+    <div class="qr-box">
+      <img src="images/image-qr-code.png" alt="QR KOD">
+    </div>
     <div class="text">
-      <h3>Equilibrium #3429</h3>
-      <p>Our Equilibrium collection promotes balance and calm.</p>
-      <div class="ethday">
-        <span class="miktar"> <img src="images/icon-ethereum.svg" alt="Ethereum"> 0.041 ETH</span>
-        <span class="day"> <img src="images/icon-clock.svg" alt="CLOCK" class="dayy"> 3 days left</span>
-      </div><hr color="#8AA8CD" size="0,5px">
-      <span class="nick"><img src="images/image-avatar.png" alt="image-avatar" class="avatar"> Creation of <a href="s#" class="a1">Jules Wyvern</a></span>
+      <h3 class="baslik">
+        Improve your front-end skills by building projects
+      </h3>
+      <p class="yazi">
+        Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
+      </p>
     </div>
   </div>
 </body>
